@@ -21,6 +21,11 @@ app.post('/', (req, res) => {
     .send('POST request received.');
 });
 
+app.get('/', (req, res) => {
+  res
+    .send('A GET Request.');
+});
+
 app.use(function errorHandler(error, req, res, next) {
   let response;
   if (NODE_ENV === 'production') {
